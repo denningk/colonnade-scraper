@@ -1,0 +1,19 @@
+{
+  "name": "colonnade-scraper",
+  "version": "1.0.0",
+  "description": "Scrape data from the Colonnade",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denningk/colonnade-scraper.git"
+  },
+  "author": "denningk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/denningk/colonnade-scraper/issues"
+  },
+  "homepage": "https://github.com/denningk/colonnade-scraper#readme"
+}
