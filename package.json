@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/denningk/colonnade-scraper/issues"
   },
-  "homepage": "https://github.com/denningk/colonnade-scraper#readme"
+  "homepage": "https://github.com/denningk/colonnade-scraper#readme",
+  "dependencies": {
+    "puppeteer": "^2.0.0"
+  }
 }
