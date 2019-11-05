@@ -18,7 +18,7 @@ const teardown = async (browser) => {
 const login = async (page) => {
     await page.goto('https://colonnadeconnections.wlu.edu/');
     await page.type('#PC12224_txtUsername', 'kdenning');
-    await page.type('#PC12224_txtPassword', 'Keithjake1!');
+    await page.type('#PC12224_txtPassword', '');
     await page.click('#PC12224_btnLogin');
 };
 
