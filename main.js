@@ -1,3 +1,4 @@
+require('dotenv').config();
 const puppeteer = require('puppeteer');
 
 const setUp = async () => {
@@ -17,8 +18,8 @@ const teardown = async (browser) => {
 
 const login = async (page) => {
     await page.goto('https://colonnadeconnections.wlu.edu/');
-    await page.type('#PC12224_txtUsername', 'kdenning');
-    await page.type('#PC12224_txtPassword', '');
+    await page.type('#PC12224_txtUsername', process.env.USER_NAME);
+    await page.type('#PC12224_txtPassword', process.env.PASSWORD);
     await page.click('#PC12224_btnLogin');
 };
 
@@ -34,6 +35,9 @@ const main = async () => {
     await page.select('#PC13914_ctl00_64_0', 'Sigma Nu');
     await page.click('#PC13914_ctl00_btnRefresh');
     await page.waitForSelector('#PC13914_ctl00_directoryOutputGridView_myGridView');
+    
+    const tableLinks = await page.$$eval('.DirectoryListingItem > a', els => els);
+
 
     await teardown(browser);
 };
